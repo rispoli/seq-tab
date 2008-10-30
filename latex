@@ -1,0 +1,1 @@
+\frac{\Gamma, A \vdash \Delta} {\Gamma, A \land B \vdash \Delta} \quad ({\land}L_1)
