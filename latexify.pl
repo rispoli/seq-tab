@@ -37,12 +37,12 @@ proposition2string(B_op, String) :-
 proposition2string(A, A) :-
 	atom(A).
 
-print_sequent(sequent(Gamma, Delta)) :-
-	maplist(proposition2string, Gamma, Gamma_s),
-	maplist(proposition2string, Delta, Delta_s),
-	join(Gamma_s, ', ', Gamma_s_j),
-	join(Delta_s, ', ', Delta_s_j),
-	stringConcat([Gamma_s_j, ' \\vdash ', Delta_s_j, ' \\ \\ \\ ~n'], '', Sequent_s),
+print_sequent(sequent(Γ, Δ)) :-
+	maplist(proposition2string, Γ, Γ_s),
+	maplist(proposition2string, Δ, Δ_s),
+	join(Γ_s, ', ', Γ_s_j),
+	join(Δ_s, ', ', Δ_s_j),
+	stringConcat([Γ_s_j, ' \\vdash ', Δ_s_j, ' \\ \\ \\ ~n'], '', Sequent_s),
 	format(Sequent_s).
 
 print_tree([S, []]) :-
