@@ -19,8 +19,6 @@ expand_premises([H | T], [T1 | T2]) :-
 	search_nodes(H, T1),
 	expand_premises(T, T2).
 
-%expand_r(Gamma, Lambda, [], sequent(Gamma, Lambda)).
-
 expand_r(Gamma, Lambda, [Principal | Delta], T) :-
 	atom(Principal),
 	append(Lambda, [Principal], Lambda1),
