@@ -1,0 +1,25 @@
+\documentclass{article}
+\pagestyle{empty}
+\usepackage{prooftree}
+\usepackage{xspace,amssymb,amsfonts,amsmath,color}
+\usepackage{mathptmx}
+\begin{document}
+\prooftree
+\prooftree
+\prooftree
+\prooftree
+p, p, s, (t \to r) \vdash p, q, t \ \ \ 
+q, p, p, s, (t \to r) \vdash q, t \ \ \ 
+\justifies
+p, p, s, (p \to q), (t \to r) \vdash q, t \ \ \ 
+\endprooftree
+\justifies
+p, p, s, \lnot q, (t \to r), (p \to q) \vdash t \ \ \ 
+\endprooftree
+\justifies
+p, s, (p \land \lnot q), (p \to q), (t \to r) \vdash t \ \ \ 
+\endprooftree
+\justifies
+(p \land s), (p \land \lnot q), (t \to r), (p \to q) \vdash t \ \ \ 
+\endprooftree
+\end{document}
