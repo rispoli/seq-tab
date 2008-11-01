@@ -57,8 +57,8 @@ print_tree([Conclusion | [Premises]]) :-
 
 latexify(Sequent, Filename) :-
 	tell(Filename),
-	format('\\documentclass{article}~n\\pagestyle{empty}~n\\usepackage{prooftree}~n\\usepackage{xspace,amssymb,amsfonts,amsmath,color}~n\\usepackage{mathptmx}~n\\begin{document}~n'),
+	format('\\documentclass{article}~n\\pagestyle{empty}~n\\usepackage{prooftree}~n\\usepackage{xspace,amssymb,amsfonts,amsmath,color}~n\\usepackage{mathptmx}~n\\begin{document}~n\\begin{displaymath}~n'),
 	search_nodes(Sequent, Tree), !,
 	print_tree(Tree),
-	format('\\end{document}'),
+	format('\\end{displaymath}~n\\end{document}'),
 	told.
