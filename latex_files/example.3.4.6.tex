@@ -1,0 +1,32 @@
+\documentclass{article}
+\pagestyle{empty}
+\usepackage{prooftree}
+\usepackage{xspace,amssymb,amsfonts,amsmath,color}
+\usepackage{mathptmx}
+\begin{document}
+\begin{displaymath}
+\prooftree
+\prooftree
+\prooftree
+ \vdash p, q \ \ \ 
+\justifies
+\lnot p \vdash q \ \ \ 
+\endprooftree
+\justifies
+ \vdash (\lnot p \to q) \ \ \ 
+\endprooftree
+\prooftree
+\prooftree
+r \vdash  \ \ \ 
+\justifies
+ \vdash \lnot r \ \ \ 
+\endprooftree
+s \vdash  \ \ \ 
+\justifies
+(\lnot r \to s) \vdash  \ \ \ 
+\endprooftree
+\justifies
+((\lnot p \to q) \to (\lnot r \to s)) \vdash  \ \ \ 
+\endprooftree
+\end{displaymath}
+\end{document}

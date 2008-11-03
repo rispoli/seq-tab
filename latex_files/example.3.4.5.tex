@@ -1,0 +1,39 @@
+\documentclass{article}
+\pagestyle{empty}
+\usepackage{prooftree}
+\usepackage{xspace,amssymb,amsfonts,amsmath,color}
+\usepackage{mathptmx}
+\begin{document}
+\begin{displaymath}
+\prooftree
+\prooftree
+\prooftree
+\prooftree
+\prooftree
+p \vdash r, s \ \ \ 
+\justifies
+p, \lnot r \vdash s \ \ \ 
+\endprooftree
+\justifies
+p \vdash (\lnot r \to s) \ \ \ 
+\endprooftree
+\justifies
+ \vdash \lnot p, (\lnot r \to s) \ \ \ 
+\endprooftree
+\prooftree
+\prooftree
+q \vdash r, s \ \ \ 
+\justifies
+q, \lnot r \vdash s \ \ \ 
+\endprooftree
+\justifies
+q \vdash (\lnot r \to s) \ \ \ 
+\endprooftree
+\justifies
+(\lnot p \to q) \vdash (\lnot r \to s) \ \ \ 
+\endprooftree
+\justifies
+ \vdash ((\lnot p \to q) \to (\lnot r \to s)) \ \ \ 
+\endprooftree
+\end{displaymath}
+\end{document}
