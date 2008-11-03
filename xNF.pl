@@ -1,5 +1,8 @@
 :- [deduction_tree].
 
+% cnf(sequent([], [(~p->q)->(~r->s)]), X).
+% dnf(sequent([(~p->q)->(~r->s)],[]),X).
+
 xnf_search_leaves([Sequent, []], Sequent).
 
 xnf_search_leaves([_ | [Premises]], Leaves) :-

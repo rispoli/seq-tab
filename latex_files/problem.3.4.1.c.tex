@@ -1,0 +1,23 @@
+\documentclass{article}
+\pagestyle{empty}
+\usepackage{prooftree}
+\usepackage{xspace,amssymb,amsfonts,amsmath,color}
+\usepackage{mathptmx}
+\begin{document}
+\begin{displaymath}
+\prooftree
+\prooftree
+\prooftree
+a, b \vdash a \ \ \ 
+a, b \vdash b \ \ \ 
+\justifies
+a, b \vdash (a \land b) \ \ \ 
+\endprooftree
+\justifies
+a \vdash (b \to (a \land b)) \ \ \ 
+\endprooftree
+\justifies
+ \vdash (a \to (b \to (a \land b))) \ \ \ 
+\endprooftree
+\end{displaymath}
+\end{document}

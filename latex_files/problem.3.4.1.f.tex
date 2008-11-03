@@ -1,0 +1,22 @@
+\documentclass{article}
+\pagestyle{empty}
+\usepackage{prooftree}
+\usepackage{xspace,amssymb,amsfonts,amsmath,color}
+\usepackage{mathptmx}
+\begin{document}
+\begin{displaymath}
+\prooftree
+\prooftree
+\prooftree
+a \vdash a \ \ \ 
+\justifies
+ \vdash a, \lnot a \ \ \ 
+\endprooftree
+\justifies
+\lnot \lnot a \vdash a \ \ \ 
+\endprooftree
+\justifies
+ \vdash (\lnot \lnot a \to a) \ \ \ 
+\endprooftree
+\end{displaymath}
+\end{document}

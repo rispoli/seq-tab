@@ -1,0 +1,37 @@
+\documentclass{article}
+\pagestyle{empty}
+\usepackage{prooftree}
+\usepackage{xspace,amssymb,amsfonts,amsmath,color}
+\usepackage{mathptmx}
+\begin{document}
+\begin{displaymath}
+\prooftree
+\prooftree
+a \vdash c \ \ \ 
+\justifies
+ \vdash (a \to c) \ \ \ 
+\endprooftree
+\prooftree
+\prooftree
+b \vdash d \ \ \ 
+\justifies
+ \vdash (b \to d) \ \ \ 
+\endprooftree
+\prooftree
+\prooftree
+ \vdash a, b \ \ \ 
+\justifies
+ \vdash (a \lor b) \ \ \ 
+\endprooftree
+c \vdash  \ \ \ 
+\justifies
+((a \lor b) \to c) \vdash  \ \ \ 
+\endprooftree
+\justifies
+((b \to d) \to ((a \lor b) \to c)) \vdash  \ \ \ 
+\endprooftree
+\justifies
+((a \to c) \to ((b \to d) \to ((a \lor b) \to c))) \vdash  \ \ \ 
+\endprooftree
+\end{displaymath}
+\end{document}

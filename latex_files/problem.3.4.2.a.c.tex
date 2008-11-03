@@ -1,0 +1,63 @@
+\documentclass{article}
+\pagestyle{empty}
+\usepackage{prooftree}
+\usepackage{xspace,amssymb,amsfonts,amsmath,color}
+\usepackage{mathptmx}
+\begin{document}
+\begin{displaymath}
+\prooftree
+\prooftree
+\prooftree
+\prooftree
+\prooftree
+\prooftree
+a \vdash c, a, b \ \ \ 
+b \vdash c, a, b \ \ \ 
+\justifies
+(a \lor b) \vdash c, a, b \ \ \ 
+\endprooftree
+\justifies
+ \vdash a, b, ((a \lor b) \to c) \ \ \ 
+\endprooftree
+\prooftree
+\prooftree
+d, a \vdash c, a \ \ \ 
+d, b \vdash c, a \ \ \ 
+\justifies
+d, (a \lor b) \vdash c, a \ \ \ 
+\endprooftree
+\justifies
+d \vdash a, ((a \lor b) \to c) \ \ \ 
+\endprooftree
+\justifies
+(b \to d) \vdash ((a \lor b) \to c), a \ \ \ 
+\endprooftree
+\justifies
+ \vdash a, ((b \to d) \to ((a \lor b) \to c)) \ \ \ 
+\endprooftree
+\prooftree
+\prooftree
+\prooftree
+(a \lor b), c \vdash c, b \ \ \ 
+\justifies
+c \vdash b, ((a \lor b) \to c) \ \ \ 
+\endprooftree
+\prooftree
+(a \lor b), c, d \vdash c \ \ \ 
+\justifies
+c, d \vdash ((a \lor b) \to c) \ \ \ 
+\endprooftree
+\justifies
+c, (b \to d) \vdash ((a \lor b) \to c) \ \ \ 
+\endprooftree
+\justifies
+c \vdash ((b \to d) \to ((a \lor b) \to c)) \ \ \ 
+\endprooftree
+\justifies
+(a \to c) \vdash ((b \to d) \to ((a \lor b) \to c)) \ \ \ 
+\endprooftree
+\justifies
+ \vdash ((a \to c) \to ((b \to d) \to ((a \lor b) \to c))) \ \ \ 
+\endprooftree
+\end{displaymath}
+\end{document}
