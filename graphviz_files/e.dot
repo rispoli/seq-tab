@@ -1,0 +1,31 @@
+digraph G {
+	node [ shape = "plaintext" ];
+	0 [ label = "&not;((p &rarr; (q &rarr; r)) &rarr; ((p &or; s) &rarr; ((q &rarr; r) &or; s)))" ];
+	1 [ label = "&not;((p &or; s) &rarr; ((q &rarr; r) &or; s))" ];
+	0 -> 1;
+	2 [ label = "&not;((q &rarr; r) &or; s)" ];
+	1 -> 2;
+	3 [ label = "&not;s" ];
+	2 -> 3;
+	4 [ label = "&not;(q &rarr; r)" ];
+	3 -> 4;
+	5 [ label = "q" ];
+	4 -> 5;
+	6 [ label = "&not;r" ];
+	5 -> 6;
+	7 [ label = "(p &or; s)" ];
+	6 -> 7;
+	8 [ label = "p" ];
+	7 -> 8;
+	9 [ label = "(p &rarr; (q &rarr; r))" ];
+	8 -> 9;
+	10 [ label = "&not;p" ];
+	9 -> 10;
+	10 -> 8 [ arrowtail = "normal", color = "red" ];
+	11 [ label = "(q &rarr; r)" ];
+	9 -> 11;
+	11 -> 4 [ arrowtail = "normal", color = "red" ];
+	12 [ label = "s" ];
+	7 -> 12;
+	12 -> 3 [ arrowtail = "normal", color = "red" ];
+}

@@ -1,0 +1,25 @@
+digraph G {
+	node [ shape = "plaintext" ];
+	0 [ label = "&not;(&not;q &or; &not;r)" ];
+	1 [ label = "&not;&not;q" ];
+	0 -> 1;
+	2 [ label = "q" ];
+	1 -> 2;
+	3 [ label = "&not;&not;r" ];
+	2 -> 3;
+	4 [ label = "r" ];
+	3 -> 4;
+	5 [ label = "&not;(p &and; &not;(q &or; &not;r))" ];
+	4 -> 5;
+	6 [ label = "&not;p" ];
+	5 -> 6;
+	7 [ label = "&not;&not;(q &or; &not;r)" ];
+	5 -> 7;
+	8 [ label = "(q &or; &not;r)" ];
+	7 -> 8;
+	9 [ label = "q" ];
+	8 -> 9;
+	10 [ label = "&not;r" ];
+	8 -> 10;
+	10 -> 4 [ arrowtail = "normal", color = "red" ];
+}
