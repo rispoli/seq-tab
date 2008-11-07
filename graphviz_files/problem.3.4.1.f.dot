@@ -1,0 +1,10 @@
+digraph G {
+	label = "{(&not;&not;a &rarr; a)}";
+	node [ shape = "plaintext" ];
+	0 [ label = "&not;(&not;&not;a &rarr; a)" ];
+	1 [ label = "&not;a" ];
+	0 -> 1;
+	2 [ label = "&not;&not;a" ];
+	1 -> 2;
+	2 -> 1 [ arrowtail = "normal", color = "red" ];
+}

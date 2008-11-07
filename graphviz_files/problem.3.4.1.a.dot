@@ -1,0 +1,14 @@
+digraph G {
+	label = "{(a &rarr; (b &rarr; a))}";
+	node [ shape = "plaintext" ];
+	0 [ label = "&not;(a &rarr; (b &rarr; a))" ];
+	1 [ label = "a" ];
+	0 -> 1;
+	2 [ label = "&not;(b &rarr; a)" ];
+	1 -> 2;
+	3 [ label = "b" ];
+	2 -> 3;
+	4 [ label = "&not;a" ];
+	3 -> 4;
+	4 -> 1 [ arrowtail = "normal", color = "red" ];
+}

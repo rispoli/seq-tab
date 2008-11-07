@@ -1,0 +1,79 @@
+\documentclass{article}
+\pagestyle{empty}
+\usepackage{prooftree}
+\usepackage{xspace,amssymb,amsfonts,amsmath,color}
+\usepackage{mathptmx}
+\begin{document}
+\begin{displaymath}
+\prooftree
+\prooftree
+\prooftree
+\prooftree
+p \vdash ((q \to r) \lor s), p \ \ \ 
+\prooftree
+s \vdash p, (q \to r), s \ \ \ 
+\justifies
+s \vdash p, ((q \to r) \lor s) \ \ \ 
+\endprooftree
+\justifies
+(p \lor s) \vdash ((q \to r) \lor s), p \ \ \ 
+\endprooftree
+\justifies
+ \vdash p, ((p \lor s) \to ((q \to r) \lor s)) \ \ \ 
+\endprooftree
+\prooftree
+\prooftree
+\prooftree
+\prooftree
+\prooftree
+q, p \vdash r, q, s \ \ \ 
+\justifies
+p \vdash q, s, (q \to r) \ \ \ 
+\endprooftree
+\justifies
+p \vdash q, ((q \to r) \lor s) \ \ \ 
+\endprooftree
+\prooftree
+s \vdash q, (q \to r), s \ \ \ 
+\justifies
+s \vdash q, ((q \to r) \lor s) \ \ \ 
+\endprooftree
+\justifies
+(p \lor s) \vdash ((q \to r) \lor s), q \ \ \ 
+\endprooftree
+\justifies
+ \vdash q, ((p \lor s) \to ((q \to r) \lor s)) \ \ \ 
+\endprooftree
+\prooftree
+\prooftree
+\prooftree
+\prooftree
+q, p, r \vdash r, s \ \ \ 
+\justifies
+p, r \vdash s, (q \to r) \ \ \ 
+\endprooftree
+\justifies
+p, r \vdash ((q \to r) \lor s) \ \ \ 
+\endprooftree
+\prooftree
+r, s \vdash (q \to r), s \ \ \ 
+\justifies
+r, s \vdash ((q \to r) \lor s) \ \ \ 
+\endprooftree
+\justifies
+r, (p \lor s) \vdash ((q \to r) \lor s) \ \ \ 
+\endprooftree
+\justifies
+r \vdash ((p \lor s) \to ((q \to r) \lor s)) \ \ \ 
+\endprooftree
+\justifies
+(q \to r) \vdash ((p \lor s) \to ((q \to r) \lor s)) \ \ \ 
+\endprooftree
+\justifies
+(p \to (q \to r)) \vdash ((p \lor s) \to ((q \to r) \lor s)) \ \ \ 
+\endprooftree
+\justifies
+ \vdash ((p \to (q \to r)) \to ((p \lor s) \to ((q \to r) \lor s))) \ \ \ 
+\endprooftree
+\end{displaymath}
+\end{document}

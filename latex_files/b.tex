@@ -1,0 +1,15 @@
+\documentclass{article}
+\pagestyle{empty}
+\usepackage{prooftree}
+\usepackage{xspace,amssymb,amsfonts,amsmath,color}
+\usepackage{mathptmx}
+\begin{document}
+\begin{displaymath}
+\prooftree
+a, p, (p \to q) \vdash a, b, q \ \ \ 
+b, a, p, (p \to q) \vdash b, q \ \ \ 
+\justifies
+a, p, (a \to b), (p \to q) \vdash b, q \ \ \ 
+\endprooftree
+\end{displaymath}
+\end{document}

@@ -1,0 +1,26 @@
+digraph G {
+	label = "{((a &rarr; b) &rarr; ((a &rarr; &not;b) &rarr; &not;a))}";
+	node [ shape = "plaintext" ];
+	0 [ label = "&not;((a &rarr; b) &rarr; ((a &rarr; &not;b) &rarr; &not;a))" ];
+	1 [ label = "&not;((a &rarr; &not;b) &rarr; &not;a)" ];
+	0 -> 1;
+	2 [ label = "&not;&not;a" ];
+	1 -> 2;
+	3 [ label = "a" ];
+	2 -> 3;
+	4 [ label = "(a &rarr; b)" ];
+	3 -> 4;
+	5 [ label = "&not;a" ];
+	4 -> 5;
+	5 -> 3 [ arrowtail = "normal", color = "red" ];
+	6 [ label = "b" ];
+	4 -> 6;
+	7 [ label = "(a &rarr; &not;b)" ];
+	6 -> 7;
+	8 [ label = "&not;a" ];
+	7 -> 8;
+	8 -> 3 [ arrowtail = "normal", color = "red" ];
+	9 [ label = "&not;b" ];
+	7 -> 9;
+	9 -> 6 [ arrowtail = "normal", color = "red" ];
+}

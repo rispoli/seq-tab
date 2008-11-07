@@ -1,16 +1,11 @@
 :- [tableaux].
+:- [shared].
 
 get_fun(&, ' &and; ').
 
 get_fun(#, ' &or; ').
 
 get_fun(->, ' &rarr; ').
-
-stringConcat([], Output, Output).
-
-stringConcat([Head|Tail], TempString, Output) :-
-	string_concat(TempString, Head, TempString1),
-	stringConcat(Tail, TempString1, Output).
 
 print_node(A, A_s) :-
 	atom(A), !,
@@ -76,7 +71,11 @@ print_tree(Path, [H | T], Parent_id) :-
 
 dottify(Set, Filename) :-
 	tell(Filename),
-	format('digraph G {~n\tnode [ shape = "plaintext" ];~n'),
+	format('digraph G {~n'),
+	maplist(print_node, Set, Set_s),
+	join(Set_s, ', ', Set_s_j),
+	format('\tlabel = "{~s}";~n', Set_s_j),
+	format('\tnode [ shape = "plaintext" ];~n'),
 	negate_formulae(Set, Set_n),
 	order(Set_n, Set_n_o),
 	tableaux([], Set_n_o, [Root | Tree]), !,

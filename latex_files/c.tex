@@ -1,0 +1,25 @@
+\documentclass{article}
+\pagestyle{empty}
+\usepackage{prooftree}
+\usepackage{xspace,amssymb,amsfonts,amsmath,color}
+\usepackage{mathptmx}
+\begin{document}
+\begin{displaymath}
+\prooftree
+\prooftree
+ \vdash p, a \ \ \ 
+q \vdash a \ \ \ 
+\justifies
+(p \to q) \vdash a \ \ \ 
+\endprooftree
+\prooftree
+b \vdash p \ \ \ 
+q, b \vdash  \ \ \ 
+\justifies
+b, (p \to q) \vdash  \ \ \ 
+\endprooftree
+\justifies
+(a \to b), (p \to q) \vdash  \ \ \ 
+\endprooftree
+\end{displaymath}
+\end{document}

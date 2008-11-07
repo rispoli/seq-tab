@@ -1,0 +1,12 @@
+digraph G {
+	label = "tree label";
+	node [ shape = "plaintext" ];
+	0 [ label = "node label" ];
+	1 [ label = "another node label" ];
+
+	// forward relationship
+	0 -> 1;
+
+	// backward relationship, path closed
+	1 -> 0 [ arrowtail = "normal", color = "red" ];
+}

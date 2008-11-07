@@ -1,4 +1,5 @@
 digraph G {
+	label = "{(&not;q &or; &not;r), (p &and; &not;(q &or; &not;r))}";
 	node [ shape = "plaintext" ];
 	0 [ label = "&not;(&not;q &or; &not;r)" ];
 	1 [ label = "&not;&not;q" ];
