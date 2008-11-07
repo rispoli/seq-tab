@@ -1,0 +1,39 @@
+dottify([(p->q)->(~q-> ~p)],'example.3.4.1.dot').
+dottify([~a, ~(p->q),~b,d],'example.3.4.2.dot').
+dottify([~(p& ~q),~(p->q),~(t->r),~(p&s),t],'example.3.4.4.dot').
+dottify([(~p->q)->(~r->s)],'example.3.4.5.dot').
+dottify([a->(b->a)],'problem.3.4.1.a.dot').
+dottify([(a->b)->((a->(b->c))->(a->c))],'problem.3.4.1.b.dot').
+dottify([a->(b->(a&b))],'problem.3.4.1.c.dot').
+dottify([(a->b)->((a-> ~b)-> ~a)],'problem.3.4.1.d.dot').
+dottify([(a->c)->((b->c)->((a#b)->c))],'problem.3.4.1.e.dot').
+dottify([~ ~a->a],'problem.3.4.1.f.dot').
+dottify([(a->c)->((b->d)->((a#b)->c))],'problem.3.4.2.a.dot').
+dottify([(a->b)->((b-> ~c)-> ~a)],'problem.3.4.2.b.dot').
+dottify([~(p->q),~p,q],'a.dot').
+dottify([~(p->q),~(a->b),~a,b,~p,q],'b.dot').
+dottify([~(p->q),~(a->b)],'c.dot').
+dottify([(~q# ~r),(p& ~(q# ~r))],'d.dot').
+dottify([((p->(q->r))->((p#s)->((q->r)#s)))],'e.dot').
+dottify([a,~a],'axiom.dot').
+
+latexify(sequent([],[(p->q)->(~q-> ~p)]),'example.3.4.1.tex').
+latexify(sequent([a,(p->q),b],[d]),'example.3.4.2.tex').
+latexify(sequent([(p& ~q),(p->q),(t->r),(p&s)],[t]),'example.3.4.4.tex').
+latexify(sequent([],[(~p->q)->(~r->s)]),'example.3.4.5.tex').
+latexify(sequent([],[a->(b->a)]),'problem.3.4.1.a.tex').
+latexify(sequent([],[(a->b)->((a->(b->c))->(a->c))]),'problem.3.4.1.b.tex').
+latexify(sequent([],[a->(b->(a&b))]),'problem.3.4.1.c.tex').
+latexify(sequent([],[(a->b)->((a-> ~b)-> ~a)]),'problem.3.4.1.d.tex').
+latexify(sequent([],[(a->c)->((b->c)->((a#b)->c))]),'problem.3.4.1.e.tex').
+latexify(sequent([],[~ ~a->a]),'problem.3.4.1.f.tex').
+latexify(sequent([],[(a->c)->((b->d)->((a#b)->c))]),'problem.3.4.2.a.c.tex').
+latexify(sequent([(a->c)->((b->d)->((a#b)->c))],[]),'problem.3.4.2.a.d.tex').
+latexify(sequent([],[(a->b)->((b-> ~c)-> ~a)]),'problem.3.4.2.b.c.tex').
+latexify(sequent([(a->b)->((b-> ~c)-> ~a)],[]),'problem.3.4.2.b.d.tex').
+latexify(sequent([(p->q),p],[q]),'a.tex').
+latexify(sequent([(p->q),(a->b),a,p],[b,q]),'b.tex').
+latexify(sequent([(p->q),(a->b)],[]),'c.tex').
+latexify(sequent([],[(~q# ~r),(p& ~(q# ~r))]),'d.tex').
+latexify(sequent([],[((p->(q->r))->((p#s)->((q->r)#s)))]),'e.tex').
+latexify(sequent([a],[a]),'axiom.tex').
