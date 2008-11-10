@@ -15,3 +15,6 @@ innerJoin([Last], _, TempString, Output) :-
 innerJoin([Head | Tail], Separator, TempString, Output) :-
 	stringConcat([Head, Separator], TempString, TempString1),
 	innerJoin(Tail, Separator, TempString1, Output).
+
+atom_n(X) :-
+	atom(X).

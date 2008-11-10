@@ -6,11 +6,11 @@ is_empty([]).
 axiom(Γ, Δ) :-
 	list_to_set(Γ, G), list_to_set(Δ, D),
 	intersection(G, D, I),
-	maplist(atom, I),
+	maplist(atom_n, I),
 	\+is_empty(I).
 
 finished(Γ, Δ) :-
-   ( maplist(atom, Γ), maplist(atom, Δ), ! );
+   ( maplist(atom_n, Γ), maplist(atom_n, Δ), ! );
    axiom(Γ, Δ).
 
 expand_premises([], []).
@@ -20,7 +20,7 @@ expand_premises([H | T], [T1 | T2]) :-
 	expand_premises(T, T2).
 
 expand_r(Γ, Λ, [Principal | Δ], T) :-
-	atom(Principal),
+	atom_n(Principal),
 	append(Λ, [Principal], Λ1),
 	expand_r(Γ, Λ1, Δ, T).
 
@@ -34,7 +34,7 @@ expand_l(Γ, [], Λ, T) :-
 	expand_r(Γ, [], Λ_o, T).
 
 expand_l(Γ, [Principal | Δ], Λ, T) :-
-	atom(Principal),
+	atom_n(Principal),
 	append(Γ, [Principal], Γ1),
 	expand_l(Γ1, Δ, Λ, T).
 
