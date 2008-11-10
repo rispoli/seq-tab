@@ -1,0 +1,36 @@
+\documentclass{article}
+\pagestyle{empty}
+\usepackage{prooftree}
+\usepackage{xspace,amssymb,amsfonts,amsmath,color}
+\usepackage{mathptmx}
+\begin{document}
+\begin{displaymath}
+\prooftree
+\prooftree
+\prooftree
+\prooftree
+\prooftree
+\prooftree
+a, b, \lnot g, \lnot g, \lnot a \vdash  \ \ \ 
+a, b, \lnot g, \lnot g, \lnot b \vdash  \ \ \ 
+\justifies
+a, b, \lnot g, \lnot g, \lnot (a \land b) \vdash  \ \ \ 
+\endprooftree
+g, a, b, \lnot g, \lnot g \vdash  \ \ \ 
+\justifies
+a, b, \lnot g, \lnot g, ((a \land b) \to g) \vdash  \ \ \ 
+\endprooftree
+\justifies
+a, \lnot g, \lnot (b \to g), ((a \land b) \to g) \vdash  \ \ \ 
+\endprooftree
+\justifies
+\lnot (a \to g), \lnot (b \to g), ((a \land b) \to g) \vdash  \ \ \ 
+\endprooftree
+\justifies
+\lnot ((a \to g) \lor (b \to g)), ((a \land b) \to g) \vdash  \ \ \ 
+\endprooftree
+\justifies
+\lnot (((a \land b) \to g) \to ((a \to g) \lor (b \to g))) \vdash  \ \ \ 
+\endprooftree
+\end{displaymath}
+\end{document}

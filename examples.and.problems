@@ -39,7 +39,7 @@ latexify(sequent([],[((p->(q->r))->((p#s)->((q->r)#s)))]),'e.tex').
 latexify(sequent([a],[a]),'axiom.tex').
 
 # One-sided sequents:
-latexify(sequent([((a&b)->g)->((a->g)#(b->g))], []), '30.bell.machover.seq.tex').
+latexify(sequent([~(((a&b)->g)->((a->g)#(b->g)))], []), '30.bell.machover.seq.tex').
 dottify([((a&b)->g)->((a->g)#(b->g))], '30.bell.machover.dot').
 
 # DNF-Tableaux equivalent:
