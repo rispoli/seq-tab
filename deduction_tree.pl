@@ -3,6 +3,9 @@
 
 is_empty([]).
 
+atom_n(X) :-
+	atom(X).
+
 axiom(Γ, Δ) :-
 	list_to_set(Γ, G), list_to_set(Δ, D),
 	intersection(G, D, I),

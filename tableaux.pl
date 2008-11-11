@@ -1,15 +1,11 @@
 :- [expansion_rules].
 :- [order_tableaux].
+:- [shared].
 
 negate_formulae([], []).
 
 negate_formulae([H | T], [~H | T_n]) :-
 	negate_formulae(T, T_n).
-
-dneg_e(~ ~A, A_d) :-
-	!, dneg_e(A, A_d).
-
-dneg_e(A, A).
 
 is_closed(Path, ~P) :-
 	!, member(P, Path).

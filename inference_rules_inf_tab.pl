@@ -26,3 +26,7 @@ inference_rule(sequent([Γ, A -> B, Δ], []), [sequent([~A | Θ], []), sequent([
 % →: right
 inference_rule(sequent([Δ, ~(A -> B), Λ], []), [sequent([A, ~B | Θ], [])]) :-
 	append(Δ, Λ, Θ).
+
+% ¬¬ elimination
+inference_rule(sequent([Γ, ~ ~A, Δ], []), [sequent(Θ, [])]) :-
+	append(Γ, [A | Δ], Θ).
