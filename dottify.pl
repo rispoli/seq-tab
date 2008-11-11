@@ -1,5 +1,4 @@
 :- [tableaux].
-:- [shared].
 
 get_fun(&, ' &and; ').
 

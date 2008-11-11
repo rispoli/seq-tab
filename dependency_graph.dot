@@ -1,0 +1,19 @@
+digraph DG {
+	label = "Dependency Graph";
+	deduction_tree -> deduction_tree_tab;
+	deduction_tree -> latexify;
+	deduction_tree -> xNF;
+	deduction_tree_tab -> latexify_tab;
+	expansion_rules -> tableaux;
+	inference_rules_inf -> deduction_tree;
+	inference_rules_inf_tab -> deduction_tree_tab;
+	latexify -> latexify_tab;
+	qsort -> order;
+	qsort -> order_tableaux;
+	shared -> deduction_tree_tab;
+	shared -> latexify;
+	shared -> tableaux;
+	tableaux -> dottify;
+	order -> deduction_tree;
+	order_tableaux -> tableaux;
+}
