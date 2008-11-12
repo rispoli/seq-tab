@@ -8,39 +8,14 @@
 \prooftree
 \prooftree
 \prooftree
-\prooftree
-\prooftree
-a \vdash a, a \ \ \ 
-\justifies
- \vdash a, a, \lnot a \ \ \ 
-\endprooftree
-\prooftree
-\prooftree
-a \vdash a, b \ \ \ 
-\justifies
- \vdash a, b, \lnot a \ \ \ 
-\endprooftree
-\justifies
-\lnot b \vdash \lnot a, a \ \ \ 
-\endprooftree
-\justifies
 (a \to \lnot b) \vdash \lnot a, a \ \ \ 
-\endprooftree
 \justifies
  \vdash a, ((a \to \lnot b) \to \lnot a) \ \ \ 
 \endprooftree
 \prooftree
 \prooftree
-\prooftree
-a, b \vdash a \ \ \ 
-\justifies
 b \vdash a, \lnot a \ \ \ 
-\endprooftree
-\prooftree
-b \vdash b, \lnot a \ \ \ 
-\justifies
-b, \lnot b \vdash \lnot a \ \ \ 
-\endprooftree
+\lnot b, b \vdash \lnot a \ \ \ 
 \justifies
 b, (a \to \lnot b) \vdash \lnot a \ \ \ 
 \endprooftree
