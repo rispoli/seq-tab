@@ -1,5 +1,4 @@
 :- [deduction_tree].
-:- [shared].
 
 functor2string(&, ' \\land ').
 

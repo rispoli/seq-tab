@@ -11,8 +11,6 @@ digraph DG {
 	qsort -> order;
 	qsort -> order_tableaux;
 	shared -> deduction_tree;
-	shared -> deduction_tree_tab;
-	shared -> latexify;
 	shared -> tableaux;
 	tableaux -> dottify;
 	order -> deduction_tree;
