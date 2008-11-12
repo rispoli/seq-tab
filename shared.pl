@@ -20,3 +20,19 @@ dneg_e(~ ~A, A_d) :-
 	!, dneg_e(A, A_d).
 
 dneg_e(A, A).
+
+one_sided_axiom_m([], [], []).
+
+one_sided_axiom_m([~H | T], G, [H | D]) :-
+	!, one_sided_axiom_m(T, G, D).
+
+one_sided_axiom_m([H | T], [H | G], D) :-
+	one_sided_axiom_m(T, G, D).
+
+one_sided_axiom(Γ, []) :-
+	list_to_set(Γ, G),
+	maplist(dneg_e, G, G_dne),
+	one_sided_axiom_m(G_dne, G_dne_m, D),
+	intersection(G_dne_m, D, I),
+	maplist(atom_n, I),
+	\+is_empty(I).

@@ -10,6 +10,7 @@ digraph DG {
 	latexify -> latexify_tab;
 	qsort -> order;
 	qsort -> order_tableaux;
+	shared -> deduction_tree;
 	shared -> deduction_tree_tab;
 	shared -> latexify;
 	shared -> tableaux;

@@ -21,6 +21,7 @@ latexify(sequent([],[(p->q)->(~q-> ~p)]),'example.3.4.1.tex').
 latexify(sequent([a,(p->q),b],[d]),'example.3.4.2.tex').
 latexify(sequent([(p& ~q),(p->q),(t->r),(p&s)],[t]),'example.3.4.4.tex').
 latexify(sequent([],[(~p->q)->(~r->s)]),'example.3.4.5.tex').
+latexify(sequent([(~p->q)->(~r->s)],[]),'example.3.4.6.tex').
 latexify(sequent([],[a->(b->a)]),'problem.3.4.1.a.tex').
 latexify(sequent([],[(a->b)->((a->(b->c))->(a->c))]),'problem.3.4.1.b.tex').
 latexify(sequent([],[a->(b->(a&b))]),'problem.3.4.1.c.tex').

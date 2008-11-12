@@ -1,5 +1,6 @@
 :- [inference_rules_inf].
 :- [order].
+:- [shared].
 
 is_empty([]).
 
@@ -7,10 +8,14 @@ atom_n(X) :-
 	atom(X).
 
 axiom(Γ, Δ) :-
-	list_to_set(Γ, G), list_to_set(Δ, D),
-	intersection(G, D, I),
-	maplist(atom_n, I),
-	\+is_empty(I).
+	(
+		list_to_set(Γ, G), list_to_set(Δ, D),
+		intersection(G, D, I),
+		maplist(atom_n, I),
+		\+is_empty(I)
+	);
+	one_sided_axiom(Γ, []);
+	one_sided_axiom(Δ, []).
 
 finished(Γ, Δ) :-
    ( maplist(atom_n, Γ), maplist(atom_n, Δ), ! );
