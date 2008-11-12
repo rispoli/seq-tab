@@ -21,6 +21,8 @@ dneg_e(~ ~A, A_d) :-
 
 dneg_e(A, A).
 
+is_empty([]).
+
 one_sided_axiom_m([], [], []).
 
 one_sided_axiom_m([~H | T], G, [H | D]) :-

@@ -2,8 +2,6 @@
 :- [order].
 :- [shared].
 
-is_empty([]).
-
 atom_n(X) :-
 	atom(X).
 
