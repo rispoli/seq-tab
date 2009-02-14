@@ -1,0 +1,46 @@
+\documentclass{article}
+\pagestyle{empty}
+\usepackage{prooftree}
+\usepackage{xspace,amssymb,amsfonts,amsmath,color}
+\usepackage{mathptmx}
+\begin{document}
+\begin{displaymath}
+\prooftree
+\prooftree
+\prooftree
+\prooftree
+\prooftree
+\prooftree
+a, c \vdash b, a \ \ \ 
+a, c \vdash b, c \ \ \ 
+\justifies
+a, c \vdash b, (a \land c) \ \ \ 
+\endprooftree
+a, c \vdash c, (a \land c) \ \ \ 
+\justifies
+a, c \vdash (b \land c), (a \land c) \ \ \ 
+\endprooftree
+\justifies
+a, c \vdash ((a \land c) \lor (b \land c)) \ \ \ 
+\endprooftree
+\prooftree
+\prooftree
+b, c \vdash b, (a \land c) \ \ \ 
+b, c \vdash c, (a \land c) \ \ \ 
+\justifies
+b, c \vdash (b \land c), (a \land c) \ \ \ 
+\endprooftree
+\justifies
+b, c \vdash ((a \land c) \lor (b \land c)) \ \ \ 
+\endprooftree
+\justifies
+c, (a \lor b) \vdash ((a \land c) \lor (b \land c)) \ \ \ 
+\endprooftree
+\justifies
+((a \lor b) \land c) \vdash ((a \land c) \lor (b \land c)) \ \ \ 
+\endprooftree
+\justifies
+ \vdash (((a \lor b) \land c) \to ((a \land c) \lor (b \land c))) \ \ \ 
+\endprooftree
+\end{displaymath}
+\end{document}
