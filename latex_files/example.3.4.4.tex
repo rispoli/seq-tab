@@ -9,19 +9,37 @@
 \prooftree
 \prooftree
 \prooftree
+\prooftree
+\justifies
 p, p, s, (t \to r) \vdash p, q, t \ \ \ 
+\using
+(AX)
+\endprooftree
+\prooftree
+\justifies
 q, p, p, s, (t \to r) \vdash q, t \ \ \ 
+\using
+(AX)
+\endprooftree
 \justifies
 p, p, s, (p \to q), (t \to r) \vdash q, t \ \ \ 
+\using
+(\to L)
 \endprooftree
 \justifies
 p, p, s, \lnot q, (t \to r), (p \to q) \vdash t \ \ \ 
+\using
+(\lnot L)
 \endprooftree
 \justifies
 p, s, (p \land \lnot q), (p \to q), (t \to r) \vdash t \ \ \ 
+\using
+(\land L)
 \endprooftree
 \justifies
 (p \land s), (p \land \lnot q), (t \to r), (p \to q) \vdash t \ \ \ 
+\using
+(\land L)
 \endprooftree
 \end{displaymath}
 \end{document}

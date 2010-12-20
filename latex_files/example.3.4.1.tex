@@ -8,20 +8,38 @@
 \prooftree
 \prooftree
 \prooftree
+\prooftree
+\justifies
 \lnot q \vdash \lnot p, p \ \ \ 
+\using
+(AX)
+\endprooftree
 \justifies
  \vdash p, (\lnot q \to \lnot p) \ \ \ 
+\using
+(\to R)
 \endprooftree
 \prooftree
+\prooftree
+\justifies
 \lnot q, q \vdash \lnot p \ \ \ 
+\using
+(AX)
+\endprooftree
 \justifies
 q \vdash (\lnot q \to \lnot p) \ \ \ 
+\using
+(\to R)
 \endprooftree
 \justifies
 (p \to q) \vdash (\lnot q \to \lnot p) \ \ \ 
+\using
+(\to L)
 \endprooftree
 \justifies
  \vdash ((p \to q) \to (\lnot q \to \lnot p)) \ \ \ 
+\using
+(\to R)
 \endprooftree
 \end{displaymath}
 \end{document}

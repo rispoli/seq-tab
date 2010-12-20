@@ -10,28 +10,55 @@
 \prooftree
 \prooftree
 \prooftree
-\lnot a, a, \lnot b \vdash  \ \ \ 
-b, a, \lnot b \vdash  \ \ \ 
+\prooftree
 \justifies
-a, \lnot b, (a \to b) \vdash  \ \ \ 
+\lnot a, a, \lnot b \vdash  \ \ \ 
+\using
+(AX)
 \endprooftree
 \prooftree
+\justifies
+b, a, \lnot b \vdash  \ \ \ 
+\using
+(AX)
+\endprooftree
+\justifies
+a, \lnot b, (a \to b) \vdash  \ \ \ 
+\using
+(\to L)
+\endprooftree
+\prooftree
+\prooftree
+\justifies
 \lnot a, a, \lnot c \vdash  \ \ \ 
+\using
+(AX)
+\endprooftree
 b, a, \lnot c \vdash  \ \ \ 
 \justifies
 a, \lnot c, (a \to b) \vdash  \ \ \ 
+\using
+(\to L)
 \endprooftree
 \justifies
 a, (b \to \lnot c), (a \to b) \vdash  \ \ \ 
+\using
+(\to L)
 \endprooftree
 \justifies
 \lnot \lnot a, (a \to b), (b \to \lnot c) \vdash  \ \ \ 
+\using
+(\lnot \lnot E)
 \endprooftree
 \justifies
 \lnot ((b \to \lnot c) \to \lnot a), (a \to b) \vdash  \ \ \ 
+\using
+(\to R)
 \endprooftree
 \justifies
 \lnot ((a \to b) \to ((b \to \lnot c) \to \lnot a)) \vdash  \ \ \ 
+\using
+(\to R)
 \endprooftree
 \end{displaymath}
 \end{document}

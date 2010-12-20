@@ -10,28 +10,40 @@
 a \vdash c \ \ \ 
 \justifies
  \vdash (a \to c) \ \ \ 
+\using
+(\to R)
 \endprooftree
 \prooftree
 \prooftree
 b \vdash d \ \ \ 
 \justifies
  \vdash (b \to d) \ \ \ 
+\using
+(\to R)
 \endprooftree
 \prooftree
 \prooftree
  \vdash a, b \ \ \ 
 \justifies
  \vdash (a \lor b) \ \ \ 
+\using
+(\lor R)
 \endprooftree
 c \vdash  \ \ \ 
 \justifies
 ((a \lor b) \to c) \vdash  \ \ \ 
+\using
+(\to L)
 \endprooftree
 \justifies
 ((b \to d) \to ((a \lor b) \to c)) \vdash  \ \ \ 
+\using
+(\to L)
 \endprooftree
 \justifies
 ((a \to c) \to ((b \to d) \to ((a \lor b) \to c))) \vdash  \ \ \ 
+\using
+(\to L)
 \endprooftree
 \end{displaymath}
 \end{document}

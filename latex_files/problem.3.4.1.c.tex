@@ -8,16 +8,32 @@
 \prooftree
 \prooftree
 \prooftree
+\prooftree
+\justifies
 a, b \vdash a \ \ \ 
+\using
+(AX)
+\endprooftree
+\prooftree
+\justifies
 a, b \vdash b \ \ \ 
+\using
+(AX)
+\endprooftree
 \justifies
 a, b \vdash (a \land b) \ \ \ 
+\using
+(\land R)
 \endprooftree
 \justifies
 a \vdash (b \to (a \land b)) \ \ \ 
+\using
+(\to R)
 \endprooftree
 \justifies
  \vdash (a \to (b \to (a \land b))) \ \ \ 
+\using
+(\to R)
 \endprooftree
 \end{displaymath}
 \end{document}

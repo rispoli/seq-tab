@@ -11,36 +11,77 @@
 \prooftree
 \prooftree
 \prooftree
+\prooftree
+\justifies
 a, c \vdash b, a \ \ \ 
+\using
+(AX)
+\endprooftree
+\prooftree
+\justifies
 a, c \vdash b, c \ \ \ 
+\using
+(AX)
+\endprooftree
 \justifies
 a, c \vdash b, (a \land c) \ \ \ 
+\using
+(\land R)
 \endprooftree
+\prooftree
+\justifies
 a, c \vdash c, (a \land c) \ \ \ 
+\using
+(AX)
+\endprooftree
 \justifies
 a, c \vdash (b \land c), (a \land c) \ \ \ 
+\using
+(\land R)
 \endprooftree
 \justifies
 a, c \vdash ((a \land c) \lor (b \land c)) \ \ \ 
+\using
+(\lor R)
 \endprooftree
 \prooftree
 \prooftree
+\prooftree
+\justifies
 b, c \vdash b, (a \land c) \ \ \ 
+\using
+(AX)
+\endprooftree
+\prooftree
+\justifies
 b, c \vdash c, (a \land c) \ \ \ 
+\using
+(AX)
+\endprooftree
 \justifies
 b, c \vdash (b \land c), (a \land c) \ \ \ 
+\using
+(\land R)
 \endprooftree
 \justifies
 b, c \vdash ((a \land c) \lor (b \land c)) \ \ \ 
+\using
+(\lor R)
 \endprooftree
 \justifies
 c, (a \lor b) \vdash ((a \land c) \lor (b \land c)) \ \ \ 
+\using
+(\lor L)
 \endprooftree
 \justifies
 ((a \lor b) \land c) \vdash ((a \land c) \lor (b \land c)) \ \ \ 
+\using
+(\land L)
 \endprooftree
 \justifies
  \vdash (((a \lor b) \land c) \to ((a \land c) \lor (b \land c))) \ \ \ 
+\using
+(\to R)
 \endprooftree
 \end{displaymath}
 \end{document}

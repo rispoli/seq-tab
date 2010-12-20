@@ -7,12 +7,21 @@
 \begin{displaymath}
 \prooftree
 \prooftree
+\prooftree
+\justifies
  \vdash \lnot a, a \ \ \ 
+\using
+(AX)
+\endprooftree
 \justifies
 \lnot \lnot a \vdash a \ \ \ 
+\using
+(\lnot L)
 \endprooftree
 \justifies
  \vdash (\lnot \lnot a \to a) \ \ \ 
+\using
+(\to R)
 \endprooftree
 \end{displaymath}
 \end{document}

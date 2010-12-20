@@ -10,19 +10,27 @@
 \lnot p, \lnot q \vdash  \ \ \ 
 \justifies
 \lnot (\lnot p \to q) \vdash  \ \ \ 
+\using
+(\to R)
 \endprooftree
 \prooftree
 \prooftree
 r \vdash  \ \ \ 
 \justifies
 \lnot \lnot r \vdash  \ \ \ 
+\using
+(\lnot \lnot E)
 \endprooftree
 s \vdash  \ \ \ 
 \justifies
 (\lnot r \to s) \vdash  \ \ \ 
+\using
+(\to L)
 \endprooftree
 \justifies
 ((\lnot p \to q) \to (\lnot r \to s)) \vdash  \ \ \ 
+\using
+(\to L)
 \endprooftree
 \end{displaymath}
 \end{document}

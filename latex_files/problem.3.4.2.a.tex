@@ -11,42 +11,90 @@
 \prooftree
 \prooftree
 \prooftree
+\prooftree
+\justifies
 \lnot a, a, \lnot b, \lnot c \vdash  \ \ \ 
+\using
+(AX)
+\endprooftree
+\prooftree
+\justifies
 c, a, \lnot b, \lnot c \vdash  \ \ \ 
+\using
+(AX)
+\endprooftree
 \justifies
 a, \lnot b, \lnot c, (a \to c) \vdash  \ \ \ 
+\using
+(\to L)
 \endprooftree
+\prooftree
+\justifies
 \lnot b, \lnot c, b, (a \to c) \vdash  \ \ \ 
+\using
+(AX)
+\endprooftree
 \justifies
 \lnot b, \lnot c, (a \lor b), (a \to c) \vdash  \ \ \ 
+\using
+(\lor L)
 \endprooftree
 \prooftree
 \prooftree
+\prooftree
+\justifies
 \lnot a, a, d, \lnot c \vdash  \ \ \ 
+\using
+(AX)
+\endprooftree
+\prooftree
+\justifies
 c, a, d, \lnot c \vdash  \ \ \ 
+\using
+(AX)
+\endprooftree
 \justifies
 a, d, \lnot c, (a \to c) \vdash  \ \ \ 
+\using
+(\to L)
 \endprooftree
 \prooftree
 \lnot a, b, d, \lnot c \vdash  \ \ \ 
+\prooftree
+\justifies
 c, b, d, \lnot c \vdash  \ \ \ 
+\using
+(AX)
+\endprooftree
 \justifies
 b, d, \lnot c, (a \to c) \vdash  \ \ \ 
+\using
+(\to L)
 \endprooftree
 \justifies
 d, \lnot c, (a \lor b), (a \to c) \vdash  \ \ \ 
+\using
+(\lor L)
 \endprooftree
 \justifies
 \lnot c, (b \to d), (a \to c), (a \lor b) \vdash  \ \ \ 
+\using
+(\to L)
 \endprooftree
 \justifies
 \lnot ((a \lor b) \to c), (a \to c), (b \to d) \vdash  \ \ \ 
+\using
+(\to R)
 \endprooftree
 \justifies
 \lnot ((b \to d) \to ((a \lor b) \to c)), (a \to c) \vdash  \ \ \ 
+\using
+(\to R)
 \endprooftree
 \justifies
 \lnot ((a \to c) \to ((b \to d) \to ((a \lor b) \to c))) \vdash  \ \ \ 
+\using
+(\to R)
 \endprooftree
 \end{displaymath}
 \end{document}

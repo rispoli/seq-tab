@@ -9,71 +9,133 @@
 \prooftree
 \prooftree
 \prooftree
-p \vdash ((q \to r) \lor s), p \ \ \ 
 \prooftree
+\justifies
+p \vdash ((q \to r) \lor s), p \ \ \ 
+\using
+(AX)
+\endprooftree
+\prooftree
+\prooftree
+\justifies
 s \vdash p, (q \to r), s \ \ \ 
+\using
+(AX)
+\endprooftree
 \justifies
 s \vdash p, ((q \to r) \lor s) \ \ \ 
+\using
+(\lor R)
 \endprooftree
 \justifies
 (p \lor s) \vdash ((q \to r) \lor s), p \ \ \ 
+\using
+(\lor L)
 \endprooftree
 \justifies
  \vdash p, ((p \lor s) \to ((q \to r) \lor s)) \ \ \ 
+\using
+(\to R)
 \endprooftree
 \prooftree
 \prooftree
 \prooftree
 \prooftree
 \prooftree
+\prooftree
+\justifies
 q, p \vdash r, q, s \ \ \ 
+\using
+(AX)
+\endprooftree
 \justifies
 p \vdash q, s, (q \to r) \ \ \ 
+\using
+(\to R)
 \endprooftree
 \justifies
 p \vdash q, ((q \to r) \lor s) \ \ \ 
+\using
+(\lor R)
 \endprooftree
 \prooftree
+\prooftree
+\justifies
 s \vdash q, (q \to r), s \ \ \ 
+\using
+(AX)
+\endprooftree
 \justifies
 s \vdash q, ((q \to r) \lor s) \ \ \ 
+\using
+(\lor R)
 \endprooftree
 \justifies
 (p \lor s) \vdash ((q \to r) \lor s), q \ \ \ 
+\using
+(\lor L)
 \endprooftree
 \justifies
  \vdash q, ((p \lor s) \to ((q \to r) \lor s)) \ \ \ 
+\using
+(\to R)
 \endprooftree
 \prooftree
 \prooftree
 \prooftree
 \prooftree
+\prooftree
+\justifies
 q, p, r \vdash r, s \ \ \ 
+\using
+(AX)
+\endprooftree
 \justifies
 p, r \vdash s, (q \to r) \ \ \ 
+\using
+(\to R)
 \endprooftree
 \justifies
 p, r \vdash ((q \to r) \lor s) \ \ \ 
+\using
+(\lor R)
 \endprooftree
 \prooftree
+\prooftree
+\justifies
 r, s \vdash (q \to r), s \ \ \ 
+\using
+(AX)
+\endprooftree
 \justifies
 r, s \vdash ((q \to r) \lor s) \ \ \ 
+\using
+(\lor R)
 \endprooftree
 \justifies
 r, (p \lor s) \vdash ((q \to r) \lor s) \ \ \ 
+\using
+(\lor L)
 \endprooftree
 \justifies
 r \vdash ((p \lor s) \to ((q \to r) \lor s)) \ \ \ 
+\using
+(\to R)
 \endprooftree
 \justifies
 (q \to r) \vdash ((p \lor s) \to ((q \to r) \lor s)) \ \ \ 
+\using
+(\to L)
 \endprooftree
 \justifies
 (p \to (q \to r)) \vdash ((p \lor s) \to ((q \to r) \lor s)) \ \ \ 
+\using
+(\to L)
 \endprooftree
 \justifies
  \vdash ((p \to (q \to r)) \to ((p \lor s) \to ((q \to r) \lor s))) \ \ \ 
+\using
+(\to R)
 \endprooftree
 \end{displaymath}
 \end{document}

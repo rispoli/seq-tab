@@ -11,26 +11,53 @@
 \prooftree
 \prooftree
 \prooftree
+\prooftree
+\justifies
 a, b, \lnot g, \lnot g, \lnot a \vdash  \ \ \ 
+\using
+(AX)
+\endprooftree
+\prooftree
+\justifies
 a, b, \lnot g, \lnot g, \lnot b \vdash  \ \ \ 
+\using
+(AX)
+\endprooftree
 \justifies
 a, b, \lnot g, \lnot g, \lnot (a \land b) \vdash  \ \ \ 
+\using
+(\land R)
 \endprooftree
+\prooftree
+\justifies
 g, a, b, \lnot g, \lnot g \vdash  \ \ \ 
+\using
+(AX)
+\endprooftree
 \justifies
 a, b, \lnot g, \lnot g, ((a \land b) \to g) \vdash  \ \ \ 
+\using
+(\to L)
 \endprooftree
 \justifies
 a, \lnot g, \lnot (b \to g), ((a \land b) \to g) \vdash  \ \ \ 
+\using
+(\to R)
 \endprooftree
 \justifies
 \lnot (a \to g), \lnot (b \to g), ((a \land b) \to g) \vdash  \ \ \ 
+\using
+(\to R)
 \endprooftree
 \justifies
 \lnot ((a \to g) \lor (b \to g)), ((a \land b) \to g) \vdash  \ \ \ 
+\using
+(\lor R)
 \endprooftree
 \justifies
 \lnot (((a \land b) \to g) \to ((a \to g) \lor (b \to g))) \vdash  \ \ \ 
+\using
+(\to R)
 \endprooftree
 \end{displaymath}
 \end{document}

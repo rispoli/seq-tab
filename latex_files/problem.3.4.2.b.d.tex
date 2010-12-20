@@ -10,6 +10,8 @@
 a \vdash b \ \ \ 
 \justifies
  \vdash (a \to b) \ \ \ 
+\using
+(\to R)
 \endprooftree
 \prooftree
 \prooftree
@@ -17,20 +19,30 @@ a \vdash b \ \ \
 c, b \vdash  \ \ \ 
 \justifies
 b \vdash \lnot c \ \ \ 
+\using
+(\lnot R)
 \endprooftree
 \justifies
  \vdash (b \to \lnot c) \ \ \ 
+\using
+(\to R)
 \endprooftree
 \prooftree
  \vdash a \ \ \ 
 \justifies
 \lnot a \vdash  \ \ \ 
+\using
+(\lnot L)
 \endprooftree
 \justifies
 ((b \to \lnot c) \to \lnot a) \vdash  \ \ \ 
+\using
+(\to L)
 \endprooftree
 \justifies
 ((a \to b) \to ((b \to \lnot c) \to \lnot a)) \vdash  \ \ \ 
+\using
+(\to L)
 \endprooftree
 \end{displaymath}
 \end{document}

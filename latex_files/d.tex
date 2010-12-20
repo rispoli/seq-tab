@@ -13,24 +13,41 @@ q, r \vdash p \ \ \
 \prooftree
 \prooftree
 q, r, q \vdash  \ \ \ 
+\prooftree
+\justifies
 q, r, \lnot r \vdash  \ \ \ 
+\using
+(AX)
+\endprooftree
 \justifies
 q, r, (q \lor \lnot r) \vdash  \ \ \ 
+\using
+(\lor L)
 \endprooftree
 \justifies
 q, r \vdash \lnot (q \lor \lnot r) \ \ \ 
+\using
+(\lnot R)
 \endprooftree
 \justifies
 q, r \vdash (p \land \lnot (q \lor \lnot r)) \ \ \ 
+\using
+(\land R)
 \endprooftree
 \justifies
 q \vdash \lnot r, (p \land \lnot (q \lor \lnot r)) \ \ \ 
+\using
+(\lnot R)
 \endprooftree
 \justifies
  \vdash \lnot q, \lnot r, (p \land \lnot (q \lor \lnot r)) \ \ \ 
+\using
+(\lnot R)
 \endprooftree
 \justifies
  \vdash (\lnot q \lor \lnot r), (p \land \lnot (q \lor \lnot r)) \ \ \ 
+\using
+(\lor R)
 \endprooftree
 \end{displaymath}
 \end{document}

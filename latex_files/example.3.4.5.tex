@@ -13,27 +13,41 @@
 p \vdash r, s \ \ \ 
 \justifies
 p, \lnot r \vdash s \ \ \ 
+\using
+(\lnot L)
 \endprooftree
 \justifies
 p \vdash (\lnot r \to s) \ \ \ 
+\using
+(\to R)
 \endprooftree
 \justifies
  \vdash \lnot p, (\lnot r \to s) \ \ \ 
+\using
+(\lnot R)
 \endprooftree
 \prooftree
 \prooftree
 q \vdash r, s \ \ \ 
 \justifies
 q, \lnot r \vdash s \ \ \ 
+\using
+(\lnot L)
 \endprooftree
 \justifies
 q \vdash (\lnot r \to s) \ \ \ 
+\using
+(\to R)
 \endprooftree
 \justifies
 (\lnot p \to q) \vdash (\lnot r \to s) \ \ \ 
+\using
+(\to L)
 \endprooftree
 \justifies
  \vdash ((\lnot p \to q) \to (\lnot r \to s)) \ \ \ 
+\using
+(\to R)
 \endprooftree
 \end{displaymath}
 \end{document}

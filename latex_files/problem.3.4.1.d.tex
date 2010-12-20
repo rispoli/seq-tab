@@ -8,25 +8,50 @@
 \prooftree
 \prooftree
 \prooftree
+\prooftree
+\justifies
 (a \to \lnot b) \vdash \lnot a, a \ \ \ 
+\using
+(AX)
+\endprooftree
 \justifies
  \vdash a, ((a \to \lnot b) \to \lnot a) \ \ \ 
+\using
+(\to R)
 \endprooftree
 \prooftree
 \prooftree
+\prooftree
+\justifies
 b \vdash a, \lnot a \ \ \ 
+\using
+(AX)
+\endprooftree
+\prooftree
+\justifies
 \lnot b, b \vdash \lnot a \ \ \ 
+\using
+(AX)
+\endprooftree
 \justifies
 b, (a \to \lnot b) \vdash \lnot a \ \ \ 
+\using
+(\to L)
 \endprooftree
 \justifies
 b \vdash ((a \to \lnot b) \to \lnot a) \ \ \ 
+\using
+(\to R)
 \endprooftree
 \justifies
 (a \to b) \vdash ((a \to \lnot b) \to \lnot a) \ \ \ 
+\using
+(\to L)
 \endprooftree
 \justifies
  \vdash ((a \to b) \to ((a \to \lnot b) \to \lnot a)) \ \ \ 
+\using
+(\to R)
 \endprooftree
 \end{displaymath}
 \end{document}

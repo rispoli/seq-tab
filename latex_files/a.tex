@@ -6,10 +6,22 @@
 \begin{document}
 \begin{displaymath}
 \prooftree
+\prooftree
+\justifies
 p \vdash p, q \ \ \ 
+\using
+(AX)
+\endprooftree
+\prooftree
+\justifies
 q, p \vdash q \ \ \ 
+\using
+(AX)
+\endprooftree
 \justifies
 p, (p \to q) \vdash q \ \ \ 
+\using
+(\to L)
 \endprooftree
 \end{displaymath}
 \end{document}
