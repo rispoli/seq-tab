@@ -27,14 +27,26 @@ print_sequent(sequent(Γ, Δ)) :-
 	stringConcat([Γ_s_j, ' \\vdash ', Δ_s_j, ' \\ \\ \\ ~n'], '', Sequent_s),
 	format(Sequent_s).
 
-print_tree([S, []]) :-
+print_tree(([S, []], '')) :-
 	print_sequent(S).
 
-print_tree([Conclusion | [Premises]]) :-
+print_tree(([S, []], Rule)) :-
+	format('\\prooftree~n'),
+	format('\\justifies~n'),
+	print_sequent(S),
+	format('\\using~n'),
+	stringConcat([Rule, '~n'], '', Rule_n),
+	format(Rule_n),
+	format('\\endprooftree~n').
+
+print_tree(([Conclusion | [Premises]], Rule)) :-
 	format('\\prooftree~n'),
 	maplist(print_tree, Premises),
 	format('\\justifies~n'),
 	print_sequent(Conclusion),
+	format('\\using~n'),
+	stringConcat([Rule, '~n'], '', Rule_n),
+	format(Rule_n),
 	format('\\endprooftree~n').
 
 latexify(Sequent, Filename) :-
